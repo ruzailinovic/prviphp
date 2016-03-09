@@ -8,18 +8,26 @@
 <body>
 <h1>Ruža je najjj</h1>
 
+<form>
+    Prvi broj:<br>
+    <input type="text" name="broj1"><br>
+    Drugi broj:<br>
+    <input type="text" name="broj2"><br>
+    <br>
+    <input type="submit" value="Izračunaj"><br>
+</from>
+
+
+
 <?php
     echo('Ovo je prije odlomka<br>');
     echo('<br>');
     echo('Super, jos cemo dodati<br>');
     echo date ('d.m.Y');
 
-    $ocjena=5;
-    echo('<br>Vaša ocjena je: ' . $ocjena);
 
-    $ocjena=1;
-    echo('<br>Vaša slijedeća ocjena je: ' . $ocjena);
-
+    $rezultat = $_GET['broj1'] + $_GET['broj2'];
+    echo('<br>' . $rezultat);
 
 ?>
 
