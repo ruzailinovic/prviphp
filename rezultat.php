@@ -8,29 +8,20 @@
 <body>
 <h1>Prvi PHP</h1>
 
-<form method="post" action=""rezultat.php">
-    Prvi broj:<br>
-    <input type="text" name="broj1"><br>
-    Drugi broj:<br>
-    <input type="text" name="broj2"><br>
-    <br>
-    Treći broj:<br>
-    <input type="text" name="broj3"><br>
-    <br>
-    <input type="text" name="ime"><br>
-    <br>
-    <input type="submit" value="Izračunaj">
-</form>
-
 <?php
-echo('Vaše ime: ' . htmlspecialchars($_POST['ime']));
 
-$rezultat = $_POST['broj1'] + $_POST['broj2']+ $_POST['broj3'];
-echo('<br>' . $rezultat);
+$cijena = $_POST['broj_litara'] * 8.5;
+echo('Cijena goriva:' . $cijena . 'kn');
+
+if ($cijena > 500) {
+
+    echo('<br>Pa to ćemo morati uzeti na rate!');
+}
+if ($cijena < 500)
+    echo('<br> To možemo platiti gotovinom!');
+
 ?>
 
-<p>
-    Ovo je odlomak
-</p>
+
 </body>
 </html>
